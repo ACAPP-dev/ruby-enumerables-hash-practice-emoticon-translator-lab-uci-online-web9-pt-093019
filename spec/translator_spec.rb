@@ -1,3 +1,6 @@
+
+require "pry"
+
 describe "#load_library" do
 
   it "accepts one argument, the file path" do
@@ -57,6 +60,7 @@ describe "#load_library" do
         else
           expect(result[:get_emoticon].keys).to include(english_emoticon)
         end
+        #binding.pry
       end
     end
 

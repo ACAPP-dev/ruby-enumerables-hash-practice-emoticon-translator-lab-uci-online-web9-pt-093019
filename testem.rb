@@ -1,7 +1,9 @@
 # require modules here
 require "pry"
 require "yaml"
-
+library_file = 0 
+japanese_emoticon = {}
+english_meaning = {}
 
 def load_library(library_file)
   library_hash = {}
@@ -17,22 +19,37 @@ def load_library(library_file)
    
    library_hash["get_meaning"] = japanese_emoticon
    library_hash["get_emoticon"] = english_emoticon
- end
- library_hash
+   
+   
+   #{"get_meaning"=> {data[1]=> meaning}},
+    # {"get_emoticon" => {meaning => data[0]}}
+     
+  
+    
+  end
+  #english_emoticon
+  #japanese_emoticon
+  library_hash
+  #binding.pry
 end
 
 def get_japanese_emoticon(library_file, emoticons)
-    # code goes here
-    
    emoticon_hash = load_library(library_file)
    
-   result = emoticon_hash.find {|a| a = 
-   (emoticon_hash["get_emoticon"][emoticons])
+   p result = emoticon_hash["get_emoticon"].key(emoticons)
+   #p emoticon_hash.find {| a | a = emoticons}
+  # p result = emoticon_hash.find (emoticon_hash["get_emoticon"][emoticons])
    
-   binding.pry
- result
+   # binding.pry
+   
+  # code goes here
+  
+  
 end
 
 def get_english_meaning
   # code goes here
 end
+
+#p load_library(library_file)
+ get_japanese_emoticon(library_file, ":O")
