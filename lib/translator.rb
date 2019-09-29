@@ -28,7 +28,7 @@ def get_japanese_emoticon(library_file, emoticons)
    
    result = emoticon_hash["get_emoticon"][emoticons]
    
-   binding.pry
+   #binding.pry
  result
 end
 
