@@ -29,7 +29,7 @@ def get_japanese_emoticon(library_file, emoticons)
    if emoticon_hash["get_emoticon"][emoticons]
    result = emoticon_hash["get_emoticon"][emoticons]
  else
-   result = "Not a known emoticon"
+   result = "Sorry, that emoticon was not found"
  end
    
    #binding.pry
