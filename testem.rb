@@ -36,7 +36,7 @@ end
 def get_japanese_emoticon(library_file, emoticons)
    emoticon_hash = load_library(library_file)
    
-   p result = emoticon_hash["get_emoticon"].key(emoticons)
+   p result = emoticon_hash["get_emoticon"][emoticons]
    #p emoticon_hash.find {| a | a = emoticons}
   # p result = emoticon_hash["get_emoticon"][emoticons]
    
