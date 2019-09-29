@@ -26,7 +26,11 @@ def get_japanese_emoticon(library_file, emoticons)
     
    emoticon_hash = load_library(library_file)
    
+   if emoticon_hash["get_emoticon"][emoticons]
    result = emoticon_hash["get_emoticon"][emoticons]
+ else
+   result = "Not a known emoticon"
+ end
    
    #binding.pry
  result
